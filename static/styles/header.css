@@ -1,0 +1,70 @@
+#intro {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50rem;
+}
+
+#intro > .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#intro > .container > .portrait {
+    border: 1px solid var(--secondary-color);
+    background: url(static/images/steam-profile.jpg) rgba(71, 181, 255, 1);
+    background-size: cover;
+    width: 25rem;
+    height: 25rem;
+    background-blend-mode: multiply;
+    margin-right: 15%;
+}
+
+#intro > .container > .desc {
+    width: 30rem;
+    height: 25rem;
+}
+
+#intro > .container > .desc > h1 {
+    font-size: 5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--title-color);
+}
+
+#intro > .container > .desc > .desc-first {
+    font-size: 2rem;
+    color: var(--secondary-color)
+}
+
+#intro > .container > .desc > .hobby {
+    font-size: 2rem;
+    color: var(--font-color);
+}
+
+#intro > .container > .desc > p {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+}
+
+#intro > .container > .desc > .expertise {
+    display: flex; 
+}
+
+#intro > .container > .desc > .expertise > li {
+    font-size: 2rem;
+    padding: 1rem;
+    border-right: 1px solid var(--secondary-color);
+}
+
+#intro > .container > .desc > .expertise > li:first-of-type {
+    padding-left: 0rem;
+}
+
+#intro > .container > .desc > .expertise > li:last-of-type {
+    border-right: 0px;
+}
