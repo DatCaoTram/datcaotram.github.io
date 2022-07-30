@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dat Tram</title>
 
-    <script src="https://kit.fontawesome.com/bdb359ba1d.js" crossorigin="anonymous"></script>
     <link rel="icon" href="/icon-e0dddf4f09ee8aaa.png">
     <link rel="stylesheet" href="/general-3886ef18281c9986.css">
     <link rel="stylesheet" href="/intro-1beaf679d48962fa.css">
@@ -16,35 +15,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&amp;display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bdb359ba1d.js" crossorigin="anonymous"></script>
   
-<link rel="preload" href="/portfolio-d4bdd8fd399a118c_bg.wasm" as="fetch" type="application/wasm" crossorigin="">
-<link rel="modulepreload" href="/portfolio-d4bdd8fd399a118c.js"></head>
+<link rel="preload" href="/portfolio-cf2e1b645392eacc_bg.wasm" as="fetch" type="application/wasm" crossorigin="">
+<link rel="modulepreload" href="/portfolio-cf2e1b645392eacc.js"></head>
 <body>
-<script type="module">import init from '/portfolio-d4bdd8fd399a118c.js';init('/portfolio-d4bdd8fd399a118c_bg.wasm');</script><script>(function () {
-    var protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-    var url = protocol + '//' + window.location.host + '/_trunk/ws';
-    var poll_interval = 5000;
-    var reload_upon_connect = () => {
-        window.setTimeout(
-            () => {
-                // when we successfully reconnect, we'll force a
-                // reload (since we presumably lost connection to
-                // trunk due to it being killed, so it will have
-                // rebuilt on restart)
-                var ws = new WebSocket(url);
-                ws.onopen = () => window.location.reload();
-                ws.onclose = reload_upon_connect;
-            },
-            poll_interval);
-    };
-
-    var ws = new WebSocket(url);
-    ws.onmessage = (ev) => {
-        const msg = JSON.parse(ev.data);
-        if (msg.reload) {
-            window.location.reload();
-        }
-    };
-    ws.onclose = reload_upon_connect;
-})()
-</script></body></html>
+<script type="module">import init from '/portfolio-cf2e1b645392eacc.js';init('/portfolio-cf2e1b645392eacc_bg.wasm');</script></body></html>
