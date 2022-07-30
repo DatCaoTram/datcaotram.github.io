@@ -14,7 +14,7 @@ pub fn showcase() -> Html {
                         .to_string() }
                     name={ "Website in Yew".to_string() }
                     purpose={ "Personal Website".to_string() }
-                    github_link={ "#".to_string() }
+                    github_link={ "https://github.com/DatCaoTram/dattram.github.io".to_string() }
                 />
            </div>
         </section>
