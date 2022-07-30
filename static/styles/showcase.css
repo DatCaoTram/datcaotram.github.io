@@ -25,7 +25,7 @@
     border-radius: 6px;
     border: 1px solid var(--secondary-color);
 
-    width: 100%;
+    width: 19rem;
     height: 20rem;
 }
 
@@ -38,13 +38,14 @@
 .project-card > .bottom {
     display: grid;
     grid-template-columns: 3fr 1fr;
+    border-top: 1px solid var(--secondary-color);
 }
 
 .project-card > .bottom > .container > h3 {
     margin: 0.25rem;
     margin-top: 0.5rem;
 
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     color: var(--font-color); 
 }
 
@@ -55,14 +56,32 @@
     color: var(--secondary-color); 
 }
 
-.project-card > .bottom > .container-link {
-    margin: 0.25rem;
-
-    font-size: 1.6rem;
+.project-card > .bottom > .center > .project-link {
+    border-radius: 18px;
+    box-shadow: 0 0 0 0 var(--glow-color);
+    font-size: 2.5rem;
     color: var(--font-color); 
+    transition: box-shadow 0.5s ease-out;
 }
 
-.project-card > .bottom > .center > .project-link {
-    font-size: 2rem;
-    color: var(--font-color); 
+.project-card > .bottom > .center > .project-link:hover {
+    box-shadow: 0 0 5px 10px var(--glow-color);
+}
+
+@media screen and (max-width: 661px) {
+    #showcase > .display {
+	display: flex;
+	justify-content: center;
+	align-items: center;	
+	flex-direction: column;
+    }
+
+    #showcase > .display > .project-card {
+	width: 25rem;
+	height: 20rem
+    }
+
+    #showcase > h2 {
+	margin-left: 5%;
+    }
 }

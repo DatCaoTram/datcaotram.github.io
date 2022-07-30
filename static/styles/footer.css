@@ -1,0 +1,24 @@
+footer {
+    margin-top: 5rem;
+    font-size: 0.8rem;
+}
+
+footer > div > .contact {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+footer > div > .contact > li {
+    margin: 1rem;
+    font-size: 2rem;
+}
+
+footer > div > .contact > li > a {
+    transition: color 0.5s ease-out;
+}
+
+footer > div > .contact > li > a:hover,
+footer > div > p > .framework {
+    color: var(--secondary-color);
+}

@@ -56,12 +56,13 @@ table {
     --secondary-color: #35858B;
     --font-color: #d0d3dd;
     --title-color: #fff;
+    --glow-color: #11334f;
+    --hover-font-color: #1f5f93;
     font-size: 16px;    
     font-family: "Open Sans", sans-serif;
 } 
 
 html {
-    height: 100%;
 }
 
 body {
@@ -70,10 +71,11 @@ body {
     align-items: center;
 
     background-color: var(--bg-color);    
-    min-height: 100%;
 }
 
 main {
+    display: flex;
+    flex-direction: column;
     width: 60rem;
 }
 
@@ -84,6 +86,7 @@ a, p, li {
 
 hr {
     color: var(--secondary-color);
+    width: 95%;
 }
 
 .center {
@@ -94,17 +97,38 @@ hr {
     height: 100%;
 }
 
-main > footer {
-    margin-top: 5rem;
-    font-size: 0.8rem;
+.one-line-s {}
+
+/* Large tablet size */
+@media screen and (max-width: 991px) {
+    :root {
+	font-size: 13px;
+    }
 }
 
-main > footer > div > .contact {
-    display: flex;
-    justify-content: center;
+/* Medium tablet size */
+@media screen and (max-width: 767px) {
+    :root {
+	font-size: 11px;
+    }
 }
 
-main > footer > div > .contact > li {
-    margin: 1rem;
-    font-size: 2rem;
+/* Small tablet and phone sizes */
+@media screen and (max-width: 661px) {
+    :root {
+	font-size: 11px;
+
+    }
+
+    main {
+	min-width: 33rem;
+    }
+
+    .center {
+	flex-direction: column;
+    }
+
+
 }
+
+

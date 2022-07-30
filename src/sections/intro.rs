@@ -1,10 +1,10 @@
 use yew::prelude::*;
 
 #[function_component(Intro)]
-pub fn header() -> Html {
+pub fn intro() -> Html {
     html! {
         <section id="intro">
-            <div class="container">
+            <div class="container center">
                 <div class="portrait"/>
                 <div class="desc">
                     <h2 class="desc-first">{ "Hi, I'm" }</h2>
@@ -12,8 +12,8 @@ pub fn header() -> Html {
                     <h2 class="hobby">{ "and I enjoy programming" }</h2>
                     <p> 
                         {"I'm currently studying at high school. My coding interests lies in 
-                        both low-level and high-level related programming sub-fields 
-                        with examples as web, game and embedded development."} 
+                        both low-level and high-level related programming topics 
+                        such as web, game and embedded development."} 
                     </p>
                     <p> 
                         {"Tools used to build my projects:"} 
