@@ -4,7 +4,7 @@ description = "A portfolio"
 name = "portfolio"
 version = "0.1.0"
 edition = "2021"
-repository = ""
+repository = "https://github.com/DatCaoTram/personal-website"
 
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
