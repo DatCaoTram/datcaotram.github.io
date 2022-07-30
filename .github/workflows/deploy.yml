@@ -1,4 +1,4 @@
-# Credit: https://github.com/Ja-sonYun/yew-template-for-github-io
+# Credit: https://github.com/n4o847/template-yew-pages
 
 name: Yew website deployment
 
@@ -10,39 +10,38 @@ on:
   pull_request:
     branches: [ "master" ]
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  deploy:
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3.0.0
-        with:
-          node-version: '16'
-      - name: rust-toolchain
-        uses: actions-rs/toolchain@v1.0.6
-        with:
-          toolchain: stable
-          target: wasm32-unknown-unknown
-      - name: trunk-action
-        uses: jetli/trunk-action@v0.1.0
+    - uses: actions/checkout@v2
 
-      # build css and rust
-      - name: run trunk
-        run: trunk build --release
+    - uses: actions/cache@v2
+      with:
+        path: |
+          ~/.cargo/bin/
+          ~/.cargo/registry/index/
+          ~/.cargo/registry/cache/
+          ~/.cargo/git/db/
+          target/
+        key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
 
-      # deploy for github.io
-      - name: GitHub Pages action
-        uses: peaceiris/actions-gh-pages@v3.7.3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: dist
+    - uses: actions-rs/cargo@v1
+      with:
+        command: install
+        args: --force trunk
+
+    - run: |
+        rustup target add wasm32-unknown-unknown
+    - run: |
+        trunk build
+      env:
+        TRUNK_BUILD_PUBLIC_URL: ./
+    - uses: peaceiris/actions-gh-pages@v3
+      if: ${{ github.ref == 'refs/heads/master' }}
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist
