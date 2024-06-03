@@ -11,9 +11,9 @@ pub fn intro() -> Html {
                     <h1>{ "Dat Tram" }</h1>
                     <h2 class="hobby">{ "and I enjoy programming" }</h2>
                     <p> 
-                        {"I'm currently studying at high school. My coding interests lies in 
-                        both low-level and high-level related programming topics 
-                        such as web, game and embedded development."} 
+                        {"Soon to be university student in Aalto University. My coding interests 
+                        lies in both low-level and high-level related programming topics 
+                        such as web, and system programming."} 
                     </p>
                     <p> 
                         {"Tools used to build my projects:"} 
