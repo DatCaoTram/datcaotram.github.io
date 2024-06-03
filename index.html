@@ -1,23 +1,36 @@
-<!DOCTYPE html><html lang="en"><head>
-    <meta charset="utf-8">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
     <meta name="description" content="Dat Tram's Portfolio">
     <meta name="keywords" content="Projects, Portfolio, Resume, Contacts">
     <meta name="author" content="Dat Tram">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dat Tram</title>
 
-    <link rel="icon" href="./icon-e0dddf4f09ee8aaa.png">
-    <link rel="stylesheet" href="./general-3886ef18281c9986.css">
-    <link rel="stylesheet" href="./intro-1beaf679d48962fa.css">
-    <link rel="stylesheet" href="./showcase-d1098f046d7cfd9b.css">
-    <link rel="stylesheet" href="./footer-a078be35679c85c4.css">
+    
+<script type="module">
+import init, * as bindings from './portfolio-5737550825f3ad1f.js';
+const wasm = await init('./portfolio-5737550825f3ad1f_bg.wasm');
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script>
+    <link rel="icon" href="./icon-e0dddf4f09ee8aaa.png" integrity="sha384&#x2D;19yXtUO3wTVne8xwaPWnIIKOLu5boIbRHn66KZVIheSJndlALwq0fCuC4K9vuUU9"/>
+    <link rel="stylesheet" href="./general-3886ef18281c9986.css" integrity="sha384&#x2D;fQqHVdM72&#x2F;0B9KHrVqEwSzqdDMbJhsYfkXEzo1&#x2F;ZXeKTENP3RDS&#x2B;vzeffyTkYZEi"/>
+    <link rel="stylesheet" href="./intro-1beaf679d48962fa.css" integrity="sha384&#x2D;BMX&#x2F;VgnX1R6iVXC1KzkvmlgXfpxqnX2&#x2F;42i1CDFuPLsb3o01fQKJTPjIf4vUOWVy"/>
+    <link rel="stylesheet" href="./showcase-d1098f046d7cfd9b.css" integrity="sha384&#x2D;1qtsfntbHWsRkOHxKyXWws0k1SACSA0PvwLS2T&#x2B;CI&#x2B;8ZYKU&#x2F;oumQcoLIa8xlsjyV"/>
+    <link rel="stylesheet" href="./footer-a078be35679c85c4.css" integrity="sha384&#x2D;aaKY6SzpQSM1V2AKI68M&#x2B;Q4tY&#x2B;45TAY3SKCPXtMrRk&#x2B;zmSYvz1YpQ5gtbyiJ1gbf"/>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/bdb359ba1d.js" crossorigin="anonymous"></script>
   
-<link rel="preload" href="./portfolio-44d36cb5b06c7051_bg.wasm" as="fetch" type="application/wasm" crossorigin="">
-<link rel="modulepreload" href="./portfolio-44d36cb5b06c7051.js"></head>
-<body>
-<script type="module">import init from './portfolio-44d36cb5b06c7051.js';init('./portfolio-44d36cb5b06c7051_bg.wasm');</script></body></html>
+<link rel="modulepreload" href="./portfolio-5737550825f3ad1f.js" crossorigin=anonymous integrity="sha384-gHy3Vi0+u1xGomAPd1L5m1ecWmuvQx4ZQLiwb75h8Z50nZrfc3L3/jnVL68HKjQa">
+<link rel="preload" href="./portfolio-5737550825f3ad1f_bg.wasm" crossorigin=anonymous integrity="sha384-f9g3UQfHUGOUwwIETJFlFipaIKLQPS9ORcYKz1LGilCohMhHnYnn4K+uyFN9WSBX" as="fetch" type="application/wasm"></head>
+</html>
