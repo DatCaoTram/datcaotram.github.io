@@ -13,7 +13,7 @@ pub fn intro() -> Html {
                     <p> 
                         {"Soon-to-be university student in Aalto University. My coding interests 
                         lies in both low-level and high-level related programming topics 
-                        such as web, and system programming."} 
+                        such as web and system programming."} 
                     </p>
                     <p> 
                         {"Tools used to build my projects:"} 
@@ -22,7 +22,6 @@ pub fn intro() -> Html {
                         <li><i class="fa-brands fa-rust"></i></li>
                         <li><i class="fa-solid fa-c"></i></li>
                         <li><i class="fa-brands fa-js"></i></li>
-                        <li><i class="fa-brands fa-css3-alt"></i></li>
                     </ul>
                 </div>
             </div>
